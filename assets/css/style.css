@@ -23,7 +23,7 @@
     --color-white-07: #FFFFFF70;
     --color-dark-blue: #002883;
     --color-blue: #407BFF;
-    --color-black: #282B28;
+    --color-black: #000000;
     --size-heading-big: 80px;
     --size-heading: 64px;
     --size-heading-small: 52px;
@@ -43,7 +43,8 @@
     text-decoration: none;
     box-sizing: border-box;
     transition: all 0.5s ease;
-    font-family: 'Factor Regular';
+    scroll-behavior: smooth;
+    font-family: 'Factor Regular', sans-serif;
 }
 
 
@@ -67,6 +68,11 @@ html {
     background: var(--color-dark-blue);
 }
 
+body.not_loaded,
+html.not_loaded {
+    overflow: hidden;
+}
+
 .header_nav_item a {
     display: flex;
     align-items: center;
@@ -84,27 +90,19 @@ html {
     height: 885px;
     background: var(--color-white);
     border-radius: 50%;
-    top: -70%;
-    left: -10%;
-}
-
-.header_circle {
-    position: absolute;
-    width: 885px;
-    height: 885px;
-    background: var(--color-white);
-    border-radius: 50%;
-    top: -100%;
-    left: -10%;
+    top: 0%;
+    left: 0%;
+    transform: translate(-20%, -100%);
 }
 
 .header_circle.moved {
-    top: -70%;
-    left: -7%;
+    top: 0%;
+    left: 0%;
+    transform: translate(-20%, -80%);
 }
 
 .loader {
-    background: #1f6dc7;
+    background: #206DC7;
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -127,6 +125,11 @@ html {
 
 .hero_list {
     display: flex;
+}
+
+.hero_item:nth-child(1) {
+    position: relative;
+    z-index: 1000;
 }
 
 .hero_item {
@@ -158,6 +161,7 @@ html {
     background: var(--color-white);
     padding: 20px 34px;
     border-radius: 20px;
+    white-space: nowrap;
 }
 
 .hero_btns a:nth-child(1) {
@@ -207,9 +211,21 @@ html {
     left: -140px;
 }
 
+.hero_img_one.changed {
+    position: absolute;
+    top: -200px;
+    left: -140px;
+}
+
 .hero_img_two {
     position: absolute;
     top: 20px;
+    right: -150px;
+}
+
+.hero_img_two.changed {
+    position: absolute;
+    top: -50px;
     right: -150px;
 }
 
@@ -227,105 +243,32 @@ html {
     right: -200px;
 }
 
-
-
-* {
-    border: 0;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+.up {
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    bottom: 20px;
+    right: -120px;
+    background: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }
 
-:root {
-    --hue: 223;
-    --bg: hsl(var(--hue), 10%, 90%);
-    --fg: hsl(var(--hue), 10%, 10%);
-    font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
+.up.scrolled {
+    right: 20px;
 }
 
-.ap {
-    width: 8em;
-    height: 16em;
+.up i {
+    color: var(--color-blue);
+    font-size: var(--size-text-big);
 }
 
-.ap__ring {
-    stroke: hsla(var(--hue), 10%, 10%, 0.15);
-    transition: stroke 0.3s;
+.up:hover i {
+    color: var(--color-white);
 }
 
-.ap__worm1,
-.ap__worm2 {
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-}
-
-.ap__worm1 {
-    animation-name: worm1;
-}
-
-.ap__worm2 {
-    animation-name: worm2;
-    visibility: hidden;
-}
-
-/* Dark theme */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: hsl(var(--hue), 10%, 10%);
-        --fg: hsl(var(--hue), 10%, 90%);
-    }
-
-    .ap__ring {
-        stroke: hsla(var(--hue), 10%, 90%, 0.1);
-    }
-}
-
-/* Animtions */
-@keyframes worm1 {
-    from {
-        animation-timing-function: ease-in-out;
-        stroke-dashoffset: -87.96;
-    }
-
-    20% {
-        animation-timing-function: ease-in;
-        stroke-dashoffset: 0;
-    }
-
-    60% {
-        stroke-dashoffset: -791.68;
-        visibility: visible;
-    }
-
-    60.1%,
-    to {
-        stroke-dashoffset: -791.68;
-        visibility: hidden;
-    }
-}
-
-@keyframes worm2 {
-
-    from,
-    60% {
-        stroke-dashoffset: -87.96;
-        visibility: hidden;
-    }
-
-    60.1% {
-        animation-timing-function: cubic-bezier(0, 0, 0.5, 0.75);
-        stroke-dashoffset: -87.96;
-        visibility: visible;
-    }
-
-    77% {
-        animation-timing-function: cubic-bezier(0.5, 0.25, 0.5, 0.88);
-        stroke-dashoffset: -340;
-        visibility: visible;
-    }
-
-    to {
-        stroke-dashoffset: -669.92;
-        visibility: visible;
-    }
+.up:hover {
+    background: var(--color-blue);
 }

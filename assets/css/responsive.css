@@ -1,0 +1,158 @@
+@media screen and (max-width: 1200px) {
+    :root {
+        --color-white: #FFFFFF;
+        --color-white-07: #FFFFFF70;
+        --color-dark-blue: #002883;
+        --color-blue: #407BFF;
+        --color-black: #282B28;
+        --size-heading-big: 80px;
+        --size-heading: 64px;
+        --size-heading-small: 52px;
+        --size-text-big: 36px;
+        --size-text: 28px;
+        --size-text-small: 24px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    :root {
+        --size-heading-big: 80px;
+        --size-heading: 64px;
+        --size-heading-small: 52px;
+        --size-text-big: 36px;
+        --size-text: 28px;
+        --size-text-small: 24px;
+    }
+
+    .hero_list {
+        flex-direction: column;
+    }
+
+    .hero_item {
+        width: 100%;
+    }
+
+    .hero_imgs img {
+        position: absolute;
+        z-index: 1000;
+    }
+
+    .hero_img_one {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .hero_img_two {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .hero_img_one.changed {
+        position: absolute;
+        top: 20px;
+        left: 0;
+    }
+
+    .hero_img_two.changed {
+        position: absolute;
+        top: -20px;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    :root {
+        --size-heading-big: 80px;
+        --size-heading: 64px;
+        --size-heading-small: 52px;
+        --size-text-big: 36px;
+        --size-text: 28px;
+        --size-text-small: 24px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    :root {
+        --size-heading-big: 80px;
+        --size-heading: 64px;
+        --size-heading-small: 52px;
+        --size-text-big: 36px;
+        --size-text: 28px;
+        --size-text-small: 24px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    :root {
+        --size-heading-big: 80px;
+        --size-heading: 64px;
+        --size-heading-small: 52px;
+        --size-text-big: 36px;
+        --size-text: 28px;
+        --size-text-small: 24px;
+    }
+
+    .hero_imgs img {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    :root {
+        --size-heading-big: 80px;
+        --size-heading: 64px;
+        --size-heading-small: 52px;
+        --size-text-big: 36px;
+        --size-text: 28px;
+        --size-text-small: 24px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --size-heading-big: 80px;
+        --size-heading: 64px;
+        --size-heading-small: 52px;
+        --size-text-big: 36px;
+        --size-text: 28px;
+        --size-text-small: 24px;
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --size-heading-big: 80px;
+        --size-heading: 64px;
+        --size-heading-small: 52px;
+        --size-text-big: 36px;
+        --size-text: 28px;
+        --size-text-small: 24px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    :root {
+        --size-heading-big: 80px;
+        --size-heading: 64px;
+        --size-heading-small: 52px;
+        --size-text-big: 36px;
+        --size-text: 28px;
+        --size-text-small: 24px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    :root {
+        --size-heading-big: 80px;
+        --size-heading: 64px;
+        --size-heading-small: 52px;
+        --size-text-big: 36px;
+        --size-text: 28px;
+        --size-text-small: 24px;
+    }
+}
