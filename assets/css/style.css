@@ -217,7 +217,17 @@ html {
     position: absolute;
     width: 1176px;
     height: 1175px;
-    left: 894px;
+    right: -2000px;
+    top: -100px;
+    background: #407BFF;
+    border-radius: 50%;
+}
+
+.hero_circle.moved {
+    position: absolute;
+    width: 1176px;
+    height: 1175px;
+    right: -200px;
     top: -100px;
     background: #407BFF;
     border-radius: 50%;
