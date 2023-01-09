@@ -20,13 +20,14 @@
 
 :root {
     --color-white: #FFFFFF;
+    --color-white-07: #FFFFFF70;
     --color-dark-blue: #002883;
     --color-blue: #407BFF;
     --color-black: #282B28;
     --size-heading-big: 80px;
     --size-heading: 64px;
     --size-heading-small: 52px;
-    --size-text: 36px;
+    --size-text-big: 36px;
     --size-text: 28px;
     --size-text-small: 24px;
 }
@@ -51,7 +52,7 @@
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 1680px;
     padding: 0 4%;
     margin: 0 auto;
 }
@@ -60,7 +61,9 @@ header {
     padding: 20px 0;
 }
 
-body {
+body,
+html {
+    overflow-x: hidden;
     background: var(--color-dark-blue);
 }
 
@@ -116,4 +119,106 @@ body {
 
 .loader.not_loaded {
     display: flex;
+}
+
+.hero {
+    padding: 200px 0;
+}
+
+.hero_list {
+    display: flex;
+}
+
+.hero_item {
+    width: 50%;
+}
+
+.hero_heading {
+    color: var(--color-white);
+    font-family: 'Factor Bold';
+    font-size: var(--size-heading-big);
+}
+
+.hero_text {
+    font-size: var(--size-text-big);
+    color: var(--color-white-07);
+    margin: 40px 0;
+}
+
+.hero_btns {
+    display: flex;
+    justify-content: start;
+}
+
+.hero_btns a {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    color: var(--color-black);
+    background: var(--color-white);
+    padding: 20px 34px;
+    border-radius: 20px;
+}
+
+.hero_btns a:nth-child(1) {
+    display: flex;
+    align-items: flex-end;
+    justify-self: center;
+}
+
+.hero_btns a:nth-child(1) img {
+    position: relative;
+    top: -3px;
+}
+
+.hero_btns a img {
+    display: block;
+    margin-right: 10px;
+}
+
+.hero_btns a:hover {
+    transform: scale(0.9);
+}
+
+.hero_btns a:nth-child(2) {
+    margin-left: 20px;
+}
+
+.hero_btns a span {
+    font-size: var(--size-text-big);
+    font-family: 'Factor Bold';
+}
+
+.hero_imgs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.hero_imgs img {
+    position: absolute;
+    z-index: 1000;
+}
+
+.hero_img_one {
+    position: absolute;
+    top: -250px;
+    left: -140px;
+}
+
+.hero_img_two {
+    position: absolute;
+    top: 20px;
+    right: -150px;
+}
+
+.hero_circle {
+    position: absolute;
+    width: 1176px;
+    height: 1175px;
+    left: 894px;
+    top: -100px;
+    background: #407BFF;
+    border-radius: 50%;
 }
